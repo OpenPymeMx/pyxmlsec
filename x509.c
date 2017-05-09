@@ -32,7 +32,7 @@ PyObject *xmlsec_X509DataGetNodeContent(PyObject *self, PyObject *args) {
 
   node = xmlNodePtr_get(node_obj);
   keyInfoCtx = xmlSecKeyInfoCtxPtr_get(keyInfoCtx_obj);
-  ret = xmlSecX509DataGetNodeContent(node, deleteChildren, keyInfoCtx);
+  ret = xmlSecX509DataGetNodeContent(node, keyInfoCtx);
 
   return wrap_int(ret);
 }
